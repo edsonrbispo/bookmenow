@@ -1,0 +1,219 @@
+:root {
+    --primaria: #3e4095;
+    --secundaria: #00AFEE;
+    --laranja: #f58634;
+    --texto: #4b4b4d;
+    --label-categoria: #D9c505;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#cabecalho {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #4b4b4d;
+    font-weight: 500;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: var(--secundaria);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#banner {
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;    
+}
+
+#banner p{
+    margin: 10px;
+}
+
+#formPesquisa {
+    background-color: #ffffff;
+    padding: 5px;
+    height: 50px;    
+    border-radius: 30px;
+    
+}
+#formPesquisa form{
+    display: flex;
+    color: var(--texto);
+    font-size: 1.5em;
+}
+#formPesquisa form input{
+    height: 40px;
+    font-size: 1rem;
+    border:none;
+}
+
+#formPesquisa form input:focus{
+    outline: none;
+}
+
+#formPesquisa form i{
+   padding: 10px;
+   font-size: 1.2rem;
+}
+
+
+#formPesquisa form button{
+    background-color: var(--primaria);
+    font-size: 1.2rem;
+    height: 40px;
+    border:none;
+    color: #ffffff;
+    min-width: 150px;
+    border-radius: 20px;
+}
+
+
+
+.lista-servicos-banner ul li{
+    display: inline-block;
+    margin: 10px;
+    border: 1px dotted #ffffff;
+    padding: 5px 20px;
+    font-size: .8em;
+    border-radius: 20px;
+}
+
+
+.secao-titulo{
+    border-left: 3px solid var(--primaria);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo a{
+    text-decoration: none;
+    color: var(--texto);
+}
+
+.lista-card-categorias{
+    display: flex;
+    gap: 40px;
+}
+
+.lista-card-categorias img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.lista-card-categorias div{
+    position: relative;
+}
+.lista-card-categorias span{
+    display: inline-block;
+    background-color: var(--laranja);
+    color: #ffffff;
+    padding: 0px 10px;
+    border-radius: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.lista-card-servicos{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;    
+}
+
+
+.lista-card-servicos img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+}
+
+.lista-card-servicos .card-servicos{
+    flex-grow: 1;
+    width: calc(33% - 30px);
+}
+
+
+
+.card-foto{
+    position: relative;
+}
+
+.card-foto-legenda{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px; 
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+.card-avaliacao{
+    margin: 5px 0;
+}
+
+.card-descricao-legenda{
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+@media (max-width: 767px) {
+    .lista-card-servicos .card-servicos{
+        flex-grow: 1;
+        width: calc(50% - 30px);
+    }
+}
