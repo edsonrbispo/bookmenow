@@ -154,7 +154,8 @@ body {
     position: relative;
 }
 
-.lista-card-categorias span {
+/* Criou a classe  */
+.lista-card-categorias .label {
     display: block;
     position: absolute;
     left: 10px;
