@@ -29,6 +29,8 @@ body {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #menu ul {
@@ -183,7 +185,7 @@ body {
 
 .card-servicos {
     flex-grow: 1;
-    width: calc(33.33% - 30px);
+    width: calc((100% / 3) - 30px);
 }
 
 .card-foto {
@@ -228,6 +230,7 @@ body {
 
 #linha-rodape {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .coluna-rodape {
@@ -288,6 +291,22 @@ body {
 
 @media (max-width: 767px) {
 
+    #cabecalho {
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    #logotipo img {
+        height: 30px;
+    }
+
+    #banner {
+        padding-top: 60px;
+        min-height: 330px;
+    }
+
     #botao-menu-mobile {
         display: block;
         /* Mostrar elemento na tela*/
@@ -297,13 +316,20 @@ body {
     }
 
     #menu {
-        position: absolute;
+
+        position: fixed;
         background-color: #fff;
         width: 250px;
         height: 100vh;
         top: 65px;
+        left: -255px;
         z-index: 999999;
         box-shadow: 2px 5px 5px #2f2f2f;
+        transition: left 0.5s;
+    }
+
+    #menu.menu-ativo {
+        left: 0;
     }
 
     #menu ul {
@@ -315,4 +341,43 @@ body {
         padding: 10px;
     }
 
+    #formPesquisa {
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 10px;
+    }
+
+    #formPesquisa form {
+        flex-direction: column;
+    }
+
+    #formPesquisa input {
+        flex-grow: 1;
+    }
+
+    .form-icon {
+        display: flex;
+        width: 100%;
+    }
+
+    .lista-servicos-banner {
+        display: none;
+    }
+
+    #banner h2 {
+        font-size: 20px;
+    }
+
+    #banner p {
+        font-size: 14px;
+    }
+
+    .card-servicos {
+        flex-grow: 1;
+        width: calc((100% / 2) - 30px);
+    }
+
+    .coluna-rodape {
+        width: 50%;
+    }
 }
