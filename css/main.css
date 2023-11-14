@@ -156,7 +156,7 @@ body {
     position: relative;
 }
 
-.lista-card-categorias span {
+.lista-card-categorias .item span {
     display: block;
     position: absolute;
     left: 10px;
